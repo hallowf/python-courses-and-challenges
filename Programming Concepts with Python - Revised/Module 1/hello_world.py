@@ -4,4 +4,4 @@ print("Hello World!")
 
 # Write to system standard output
 import sys
-sys.stdout.write("Hello World!\n")
+print("Hello World!\n", file=sys.stdout)
