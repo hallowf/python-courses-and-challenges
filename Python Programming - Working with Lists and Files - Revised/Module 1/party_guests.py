@@ -7,7 +7,7 @@ except NameError:
 finished = False
 guests = []
 
-print("Please enter guests name (Type done when finished)")
+print("Please enter guests name (Type done when finished):")
 while not finished:
   name = input(" ")
   if name.upper() != "DONE":

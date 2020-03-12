@@ -15,19 +15,19 @@ except NameError:
 loan_amount = input("Enter the loan amount ")
 interest_rate = input("Enter the interest rate ")
 loan_years = input("Enter the loan years ")
-loan_amount = int(loan_amount)
+loan_amount = float(loan_amount)
 print("Loan amount: %d" % loan_amount)
 interest_rate = float(interest_rate)
 interest_rate = interest_rate / 100
 print("Interest rate: %.2f" % interest_rate)
-loan_years = int(loan_years)
+loan_years = float(loan_years)
 print("Loan years: %d" % loan_years)
 
 number_of_payments = loan_years * 12
 
 # TODO: This seems to be correct  according to the formula
 #  however the output value is far lower than expected
-monthly_pay = loan_amount * (interest_rate * (1+interest_rate) * number_of_payments) \
+monthly_pay = loan_amount * interest_rate * (1+interest_rate) * number_of_payments \
   / ((1+interest_rate) * number_of_payments-1)
 
-print("The monthly pay is %f" % monthly_pay)
+print("The monthly pay is %.2f" % monthly_pay)
